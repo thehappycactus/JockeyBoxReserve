@@ -8,7 +8,7 @@
 
 		<div class="main" ng-controller="ReservationController as resCtrl">
 			<h1>Jockey Box Reservations</h1>
-			<form ng-submit="resCtrl.submit()">
+			<form ng-submit="resCtrl.checkRes()">
 				<div class="form-group">
 					<label for="resName">Name</label>
 					<input type="text" id="resName" class="form-control" ng-model="resCtrl.resName" placeholder="First and Last Name" />
