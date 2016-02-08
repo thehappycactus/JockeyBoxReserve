@@ -3,9 +3,9 @@
 
 	angular
 		.module('JockeyBoxResApp')
-		.controller('ReservationController', ['pg', ReservationController]);
+		.controller('ReservationController', [ReservationController]);
 
-	function ReservationController (pg) {
+	function ReservationController () {
 		var vm = this;
 		vm.resName = '';
 		vm.startDate = '';
@@ -16,7 +16,7 @@
 
 		function checkRes () {
 			// Check the DB to see if that reservation is clear
-			
+
 
 		}
 

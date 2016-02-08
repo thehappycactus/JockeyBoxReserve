@@ -6,6 +6,8 @@
 		.factory('ReservationService', ['pg', ReservationService);
 
 	function ReservationService(pg) {
-		
+		return {
+			
+		}
 	}
 })();
