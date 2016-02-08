@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="JockeyBoxResApp">
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles/main.css" />
+	</head>
+
+	<body>
+
+		<div class="main" ng-controller="ReservationController as resCtrl">
+			<h1>Jockey Box Reservations</h1>
+			<form ng-submit="resCtrl.submit()">
+				<div class="form-group">
+					<label for="resName">Name</label>
+					<input type="text" id="resName" class="form-control" ng-model="resCtrl.resName" placeholder="First and Last Name" />
+				</div>
+				<div class="form-group">
+					<label for="startDate">Rental Start Date</label>
+					<input type="date" id="startDate" class="form-control" ng-model="resCtrl.startDate" />
+				</div>
+				<div class="form-group">
+					<label for="endDate">Rental End Date</label>
+					<input type="date" id="endDate" class="form-control" ng-moel="resCtrl.startDate" />
+				</div>
+				<button type="submit" class="btn btn-lg btn-success">Request Reservation</button>
+			</form>
+		</div>
+
+	</body>
+
+	<script type="text/javascript" src="scripts/lib/angular.min.js"></script>
+	<script type="text/javascript" src="scripts/lib/moment.min.js"></script>
+	<script type="text/javascript" src="scripts/app.js"></script>
+	<script type="text/javascript" src="scripts/controllers/ReservationController.js"></script>
+
+</html>
