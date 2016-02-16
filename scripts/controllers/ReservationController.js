@@ -11,15 +11,24 @@
 		vm.startDate = '';
 		vm.endDate = '';
 
+		vm.futureResArr = new Array();
+
 		vm.isConfirm = true;
 		vm.isPay = true;
 
 		vm.checkRes = checkRes;
 		vm.confirmRes = confirmRes;
 
+		function getFutureReservation () {
+			Resrevation.getFuture().$promise().then(
+				function (data) {
+					vm.futureResArr = data;
+				});
+		}
+
 		function checkRes () {
 			// Check the DB to see if that reservation is clear
-			Reservation.get().$promise(
+			Reservation.getAll().$promise().then(
 				function (data, err) {
 
 				});

@@ -7,11 +7,16 @@
 
 	function ReservationService($resource) {
 		return $resource(
-			'/reservations/future',
+			'/reservations'
 			[],
 			{
-				get: {
+				getAll: {
 					method: 'GET',
+					isArray: true
+				},
+				getFuture: {
+					method: 'GET',
+					url: '/reservations/future',
 					isArray: true
 				}
 			});
