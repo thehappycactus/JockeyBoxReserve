@@ -7,7 +7,7 @@
 
 	function ReservationService($resource) {
 		return $resource(
-			'/reservations'
+			'/reservations',
 			[],
 			{
 				getAll: {
