@@ -2,5 +2,5 @@
 	'use strict';
 
 	angular
-		.module('JockeyBoxResApp', []);
+		.module('JockeyBoxResApp', ['ngResource'])
 })();

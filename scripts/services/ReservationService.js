@@ -3,11 +3,17 @@
 
 	angular
 		.module('JockeyBoxResApp')
-		.factory('ReservationService', ['pg', ReservationService);
+		.factory('ReservationService', [ '$resource', ReservationService ]);
 
-	function ReservationService(pg) {
-		return {
-			
-		}
+	function ReservationService($resource) {
+		return $resource(
+			'/reservations/future',
+			[],
+			{
+				get: {
+					method: 'GET',
+					isArray: true
+				}
+			});
 	}
 })();

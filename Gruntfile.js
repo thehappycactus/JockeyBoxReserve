@@ -9,7 +9,8 @@ module.exports = function (grunt) {
 				files: [
 					// Scripts
 					{ expand: false, src: ['node_modules/angular/angular.min.js'], dest: 'scripts/lib/angular.min.js'},
-					{ expand: false, src: ['node_modules/moment/min/moment.min.js'], dest: 'scripts/lib/moment.min.js'}
+					{ expand: false, src: ['node_modules/angular-resource/angular-resource.min.js'], dest: 'scripts/lib/moment.min.js'},
+					{ expand: false, src: ['node_modules/moment/min/moment.min.js'], dest: 'scripts/lib/angular-resource.min.js'}
 				]
 			}
 		},

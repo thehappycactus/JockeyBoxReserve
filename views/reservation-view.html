@@ -1,0 +1,32 @@
+<div class="main">
+	<h1>Jockey Box Reservations</h1>
+	<form ng-submit="resCtrl.checkRes()" novalidate>
+		<div class="form-group">
+			<label for="resName">Name*</label>
+			<input type="text" id="resName" class="form-control" ng-model="resCtrl.resName" placeholder="First and Last Name" required/>
+		</div>
+		<div class="form-group">
+			<label for="resName">Email*</label>
+			<input type="email" id="resEmail" class="form-control" ng-model="resCtrl.resEmail" placeholder="Your Email" required/>
+		</div>
+		<div class="form-group">
+			<label for="resName">Phone Number</label>
+			<input type="phone" id="resPhone" class="form-control" ng-model="resCtrl.resPhone" placeholder="Phone Number" />
+		</div>
+		<div class="form-group">
+			<label for="startDate">Rental Start Date</label>
+			<input type="date" id="startDate" class="form-control" ng-model="resCtrl.startDate" />
+		</div>
+		<div class="form-group">
+			<label for="endDate">Rental End Date</label>
+			<input type="date" id="endDate" class="form-control" ng-moel="resCtrl.startDate" />
+		</div>
+		<div class="button-list">
+			<button type="submit" class="btn btn-lg btn-success">Request</button>
+			<span class="glyphicon glyphicon-chevron-right"></span>
+			<button class="btn btn-lg btn-success" ng-disabled="resCtrl.isConfirm">Confirm</button>
+			<span class="glyphicon glyphicon-chevron-right"></span>
+			<button class="btn btn-lg btn-success" ng-disabled="resCtrl.isPay">Pay</button>
+		</div>
+	</form>
+</div>
